@@ -1,4 +1,4 @@
-//3.1
+//3.1_25CS027
 #include<iostream>
 using namespace std;
 
@@ -9,29 +9,25 @@ private:
     double bonus;
 
 public:
-
-    // Default constructor
     Employee() {
-        name = "Unknown";
+        name = "None";
         basicSalary = 0;
-        bonus = 1000;   // default bonus
+        bonus = 1000;  
     }
 
-    // Constructor with default bonus
     Employee(string n, double basic) {
         name = n;
         basicSalary = basic;
         bonus = 1000;
     }
 
-    // Constructor with custom bonus
     Employee(string n, double basic, double b) {
         name = n;
         basicSalary = basic;
         bonus = b;
     }
 
-    inline double calculateTotalSalary() {
+    inline double totalSalary() {
         return basicSalary + bonus;
     }
 
@@ -39,8 +35,7 @@ public:
         cout << "\nEmployee Name: " << name;
         cout << "\nBasic Salary: " << basicSalary;
         cout << "\nBonus: " << bonus;
-        cout << "\nTotal Salary: " << calculateTotalSalary();
-        cout << "\n--------------------------\n";
+        cout << "\nTotal Salary: " << totalSalary();
     }
 };
 
@@ -48,16 +43,16 @@ int main() {
 
     int n = 2;
 
-    Employee* emp = new Employee[n];  // dynamic allocation
+    Employee* e = new Employee[n];
 
-    emp[0] = Employee("Ali", 30000);
-    emp[1] = Employee("Sara", 40000, 5000);
+    e[0] = Employee("ABC", 30000);
+    e[1] = Employee("XYZ", 40000, 5000);
 
     for(int i = 0; i < n; i++) {
-        emp[i].display();
+        e[i].display();
     }
 
-    delete[] emp;
+    delete[] e;
 
     return 0;
 }

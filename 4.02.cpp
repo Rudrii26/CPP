@@ -1,3 +1,4 @@
+//4.2_25CS027
 #include<iostream>
 using namespace std;
 
@@ -27,10 +28,10 @@ class Point{
     }
 };
 
-    // void reset(Point p){
+    void reset(Point p){
 
-    //     p.move(-p.getx(), -p.gety());
-    // }
+        p.move(-p.getx(), -p.gety());
+    }
 
 int main(){
     Point p(1,2);

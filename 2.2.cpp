@@ -1,4 +1,4 @@
-//2.2
+//2.2_25CS027
 #include<iostream>
 using namespace std;
 
@@ -49,8 +49,8 @@ int main() {
     int m2[3] = {70, 75, 72};
 
     student s1;                      
-    student s2(1, "Ali", m1);        
-    student s3(2, "Sara", m2);
+    student s2(1, "ABC", m1);        
+    student s3(2, "XYZ", m2);
 
     s1.display();
     s2.display();

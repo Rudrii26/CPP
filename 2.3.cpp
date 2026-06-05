@@ -1,4 +1,4 @@
-//2.3
+//2.3_25CS027
 #include<iostream>
 using namespace std;
 
@@ -10,14 +10,12 @@ private:
 
 public:
 
-    // Constructor with zero balance
     SavingsAccount(string name, int id) {
         customerName = name;
         accountID = id;
         balance = 0;
     }
 
-    // Constructor with custom balance
     SavingsAccount(string name, int id, double initialBalance) {
         customerName = name;
         accountID = id;
@@ -49,25 +47,21 @@ public:
         cout << "\nName: " << customerName;
         cout << "\nAccount ID: " << accountID;
         cout << "\nBalance: " << balance;
-        cout << "\n-------------------------\n";
     }
 };
 
 int main() {
 
-    // Multiple account creation
-    SavingsAccount acc1("Ali", 101);
-    SavingsAccount acc2("Sara", 102, 5000);
+    SavingsAccount acc1("ABC", 1);
+    SavingsAccount acc2("XYZ", 2, 5000);
 
-    // Transactions
     acc1.deposit(2000);
     acc1.withdraw(500);
-    acc1.withdraw(3000);   // Edge case
+    acc1.withdraw(3000);   
 
     acc2.deposit(1000);
     acc2.withdraw(2000);
 
-    // Display summaries
     acc1.display();
     acc2.display();
 

@@ -11,7 +11,6 @@ private:
 
 public:
 
-    // Default Constructor
     Item() {
         itemID = 0;
         itemName = "None";
@@ -19,12 +18,21 @@ public:
         quantity = 0; 
     }
 
-    // Parameterized Constructor
     Item(int id, string name, double p, int q) {
         itemID = id;
         itemName = name;
-        price = (p >= 0) ? p : 0;
-        quantity = (q >= 0) ? q : 0;
+        if(p>=0){
+            price = p;
+        }
+        else{
+            price = 0;
+        }
+        if(q >= 0){
+            quantity = q;
+        }
+        else{
+            quantity = 0;
+        }
     }
 
     void addStock(int q) {
@@ -48,7 +56,6 @@ public:
         cout << "\nItem Name: " << itemName;
         cout << "\nPrice: " << price;
         cout << "\nQuantity: " << quantity;
-        cout << "\n----------------------\n";
     }
 };
 
